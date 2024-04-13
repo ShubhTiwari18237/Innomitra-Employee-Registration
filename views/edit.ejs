@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee Record</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light grey background */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff; /* White background for container */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+        }
+
+        h1 {
+            color: #e0201c; /* Red heading */
+            border-bottom: 2px solid #e0201c; /* Red underline */
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50; /* Green button */
+            color: white;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333; /* Dark grey for links */
+            margin-right: 10px;
+        }
+
+        hr {
+            border: 0;
+            height: 5px;
+            background-color: red;
+            margin-top: 30px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="/">Home</a> |
+    <a href="/about">About</a> |
+    <a href="/insert">Insert</a> |
+    <a href="/display">Display</a> |
+    <a href="/search">Search</a> |
+    <a href="Update">Update</a> |
+
+    <hr>
+
+    <h1>Edit Employee Record</h1>
+
+    <form method="post" action="/editsave">
+        <input type="hidden" name="id" value="<%=mydata._id %>">
+        Edit Employee No: <input type="text" name="empno" value="<%=mydata.employeeNo %>">
+        <br>
+        Edit Employee Name: <input type="text" name="empname" value="<%=mydata.employeeName %>">
+        <br>
+        Edit Employee City: <input type="text" name="city" value="<%=mydata.employeeCity %>">
+        <br>
+        Edit Employee Salary: <input type="text" name="salary" value="<%=mydata.employeeSalary %>">
+        <br>
+        <button>Edit Save</button>
+    </form>
+
+    <hr>
+
+    <p class="footer">www.Innomitra.com</p>
+</div>
+
+</body>
+</html>

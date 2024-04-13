@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url('your_background_image_url.jpg'); /* Specify your background image URL here */
+            background-size: cover; /* Cover the entire background */
+            background-repeat: no-repeat; /* Do not repeat the background image */
+            background-attachment: fixed; /* Keep the background image fixed */
+            font-family: Arial, sans-serif; /* Set a default font */
+        }
+
+        /* Style for the form container */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.7); /* Add a semi-transparent white background */
+            padding: 20px;
+            margin: 50px auto;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+        }
+
+        /* Style for form inputs */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Style for the button */
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Style for links */
+        a {
+            text-decoration: none;
+            color: #333; /* Dark grey for links */
+            margin-right: 5px;
+        }
+        h1 {
+            color: #e0201c; /* Red heading */
+            border-bottom: 2px solid #e0201c; /* Red underline */
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Style for the HR element */
+        hr {
+            border: 0;
+            height: 5px;
+            background-color: red;
+        }
+
+        /* Center align the text */
+        h1, p, .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <a href="/">Home</a> |
+        <a href="/about">About</a> |
+        <a href="/insert">Insert</a> |
+        <a href="/display">Display</a> |
+        <a href="/search">Search</a> |
+        <a href="Update">Update</a> |
+
+        <hr>
+
+        <%  if (save) 
+           {%>
+            <script>
+                alert("Data saved!");
+            </script>
+        <% } %>
+
+        <h1>Insert Employee Records</h1>
+
+        <form method="post" action="/empsave">
+            Enter Emp No: <input type="text" name="empno">
+            <br>
+            Enter Name: <input type="text" name="empname">
+            <br>
+            Enter City: <input type="text" name="empcity">
+            <br>
+            Enter Salary: <input type="text" name="empsalary">
+            <br>
+            <button>Data Save!</button>
+        </form>
+
+        <hr>
+
+        <p class="center">www.Innomitra.com</p>
+    </div>
+
+</body>
+</html>
